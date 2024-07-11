@@ -1,5 +1,5 @@
-import "./App.css";
 import { useQuery } from "@tanstack/react-query";
+import { Navbar } from "./components/navbar/Navbar";
 const url = "https://freetestapi.com/api/v1/cars";
 
 function App() {
@@ -20,7 +20,11 @@ function App() {
 
   console.log(data);
 
-  return <div className="App">Car Website</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;

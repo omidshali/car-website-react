@@ -1,0 +1,53 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding: 1rem;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+li a {
+  font-size: 0.9rem;
+}
+
+.navbar .mobile_btn {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .navbar .mobile_btn {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    z-index: 10;
+  }
+  .menu {
+    flex-direction: column-reverse;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    z-index: 10;
+    transition: left 1s;
+  }
+
+  .navbar a {
+    font-size: 1.5rem;
+  }
+
+  .active {
+    left: 0;
+  }
+}
